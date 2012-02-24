@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "acculynk"
-  gem.homepage = "http://github.com/hashrocketeer/acculynk"
+  gem.homepage = "http://github.com/JohnFord/acculynk"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Ruby wrapper for Acculynk's Web Services API}
+  gem.description = %Q{Ruby wrapper for Acculynk's Web Services API}
   gem.email = "jwford@gmail.com"
   gem.authors = ["John Ford"]
   # dependencies defined in Gemfile
