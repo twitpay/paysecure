@@ -9,15 +9,9 @@ module Acculynk
       :user_id,
       :password,
       :endpoint,
+      :js_endpoint,
       :proxy,
-      :api_version,
-      :card_no,
-      :card_exp_date,
-      :cardholder_street,
-      :cardholder_zip,
-      :cvv2,
-      :auth_amount,
-      :auth_token].freeze
+      :api_version].freeze
 
     # The endpoint that will be used to connect if none is set
     DEFAULT_ENDPOINT = 'https://cert.mws.acculynk.net/MWS/MerchantWebService.asmx?WSDL'.freeze
