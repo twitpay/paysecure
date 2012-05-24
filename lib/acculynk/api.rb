@@ -107,5 +107,19 @@ module Acculynk
       end
     end
 
+    def debit_refund(args={})
+      command = 'refund'
+      options = {
+        'tran_id' => args[:auth_token],
+        'amount' => args[:auth_amount]
+      }
+      result = call_acculynk(command, options)
+      if result["status"] == "success"
+        result.slice('tran_id').merge( :success => true )
+      else
+        { :success => false }
+      end
+    end
+
   end
 end
