@@ -121,5 +121,21 @@ module Acculynk
       end
     end
 
+    def internet_credit(args={})
+      command = 'internet_credit'
+      options = {
+        'card_no' => args[:card_no],
+        'amount' => args[:amount],
+        'partner_id' => partner_id,
+        'card_exp_date' => args[:card_exp_date]
+      }
+      result = call_acculynk(command, options)
+      if result["status"] == "success"
+        result.slice('tran_id').merge('success' => true)
+      else
+        result.slice('errorcode', 'errormsg').merge('success' => false)
+      end
+    end
+
   end
 end
