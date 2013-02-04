@@ -23,6 +23,7 @@ module Acculynk
       @client ||= Savon::Client.new do
         wsdl.document = endpoint
       end
+      @client.http.auth.ssl.ssl_version       = :TLSv1
     end
   end
 
