@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = "jwford@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
+    #"README.md",
     "README.rdoc"
   ]
   s.files = [
