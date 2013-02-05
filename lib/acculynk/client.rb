@@ -20,7 +20,7 @@ module Acculynk
     end
 
     def acculynk_client
-      @client ||= Savon::Client.new(ssl_version: :TLSv1, soap_header: requestor_credentials_header ) do
+      @client ||= Savon::Client.new(:ssl_version => :SSLv3, soap_header: requestor_credentials_header ) do
        # binding.pry
         wsdl Acculynk.options[:endpoint]
         convert_request_keys_to :camelcase
