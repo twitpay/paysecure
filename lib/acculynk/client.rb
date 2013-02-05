@@ -10,28 +10,13 @@ module HTTPI
       alias request_old request
       
       def request(method)
-        unless REQUEST_METHODS.include? method
-          raise NotSupportedError, "Net::HTTP does not support custom HTTP methods"
-        end
-
-        do_request(method) do |http, http_request|
-          http.ssl_version = :SSLv3
-          http_request.body = @request.body
-          if @request.on_body then
-            http.request(http_request) do |res|
-              res.read_body do |seg|
-                @request.on_body.call(seg)
-              end
-            end
-          else
-            http.request http_request
-          end
-        end
-      rescue OpenSSL::SSL::SSLError
-        raise SSLError
-      rescue Errno::ECONNREFUSED   # connection refused
-        $!.extend ConnectionError
-        raise
+        #        unless REQUEST_METHODS.include? method
+        #          raise NotSupportedError, "Net::HTTP does not support custom HTTP methods"
+        #        end
+        @request.ssl = true
+        @request.auth.ssl.ssl_version = :TLSv1
+        @request.auth.ssl.verify_mode = :none
+        request_old(method)
       end
     end
   end
