@@ -133,7 +133,7 @@ module Acculynk
       if result["status"] == "success"
         result.slice('tran_id').merge('success' => true)
       else
-        result.slice('errorcode', 'errormsg').merge('success' => false)
+        result.slice('errorcode', 'errormsg', 'tran_id').merge('success' => false)
       end
     end
 
