@@ -40,9 +40,9 @@ module Acculynk
       }
       result = call_acculynk(command, options)
       if result["status"] == "success"
-        result.slice('tran_id').merge('success' => true)
+        result.slice('tran_id', 'apprcode').merge('success' => true)
       else
-        result.slice('errorcode', 'errormsg').merge('success' => false)
+        result.slice('errorcode', 'errormsg', 'tran_id').merge('success' => false)
       end
     end
 
@@ -131,7 +131,7 @@ module Acculynk
       }
       result = call_acculynk(command, options)
       if result["status"] == "success"
-        result.slice('tran_id').merge('success' => true)
+        result.slice('tran_id', 'apprcode').merge('success' => true)
       else
         result.slice('errorcode', 'errormsg', 'tran_id').merge('success' => false)
       end
