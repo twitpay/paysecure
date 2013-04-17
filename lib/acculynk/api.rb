@@ -21,9 +21,9 @@ module Acculynk
     end
 
     def checkbin2(args={})
-      result = call_acculynk('checkbin', 'card_bin' => args[:card_no][0..9])
+      result = call_acculynk('checkbin2', 'card_bin' => args[:card_no][0..9])
       if (result['status']).downcase == 'success'
-        result.slice('in_network', 'errorcode', 'network_id', 'qualified_pin', 'qualified_pinless', 'qualified_internetpin', 'qualified_recurring', 'qualified_kiosk').merge(:success => true)
+        result.slice('errorcode', 'pinless_credit').merge(:success => true)
       else
         result.slice('errorcode').merge(:success => false)
       end
