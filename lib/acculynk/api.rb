@@ -20,6 +20,15 @@ module Acculynk
       result['in_network'] == 'TRUE' && result['qualified_internetpin'] == 'TRUE'
     end
 
+    def checkbin2(args={})
+      result = call_acculynk('checkbin', 'card_bin' => args[:card_no][0..9])
+      if (result['status']).downcase == 'success'
+        result.slice('in_network', 'errorcode', 'network_id', 'qualified_pin', 'qualified_pinless', 'qualified_internetpin', 'qualified_recurring', 'qualified_kiosk').merge(:success => true)
+      else
+        result.slice('errorcode').merge(:success => false)
+      end
+    end
+
     def initiate(args={})
       result = call_acculynk('initiate', 'card_no' => args[:card_no])
       if result['status'] == 'success'
