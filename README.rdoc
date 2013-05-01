@@ -1,8 +1,8 @@
-= acculynk
+= paysecure
 
 Description goes here.
 
-== Contributing to acculynk
+== Contributing to paysecure
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2012 Acculynk, Inc. See LICENSE.txt for
+Copyright (c) 2013 Acculynk, Inc. See LICENSE.txt for
 further details.
 

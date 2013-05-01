@@ -1,4 +1,4 @@
-module Acculynk
+module Paysecure
   module Api
     def avs_check(args={})
       command = 'cc_avs_only'

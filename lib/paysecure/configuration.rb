@@ -1,5 +1,5 @@
-require 'acculynk/version'
-module Acculynk
+require 'paysecure/version'
+module Paysecure
   # Defines constants and methods related to configuration
   module Configuration
     # An array of valid keys in the options hash when configuring a {Acculunk::Client}
@@ -22,7 +22,7 @@ module Acculynk
     DEFAULT_API_VERSION = '1.1.0.0'
 
     # The value sent in the 'User-Agent' header if none is set
-    DEFAULT_USER_AGENT = "Acculynk Ruby Gem #{Acculynk::VERSION}".freeze
+    DEFAULT_USER_AGENT = "Paysecure Ruby Gem #{Paysecure::VERSION}".freeze
 
     DEFAULT_GATEWAY = nil
 

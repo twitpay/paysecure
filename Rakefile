@@ -14,13 +14,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "acculynk"
-  gem.homepage = "http://github.com/JohnFord/acculynk"
+  gem.name = "paysecure"
+  gem.homepage = "http://github.com/twitpay/acculynk"
   gem.license = "MIT"
-  gem.summary = %Q{Ruby wrapper for Acculynk's Web Services API}
-  gem.description = %Q{Ruby wrapper for Acculynk's Web Services API}
-  gem.email = "jwford@gmail.com"
-  gem.authors = ["John Ford"]
+  gem.summary = %Q{Ruby wrapper for Acculynk's Paysecure Web Services API}
+  gem.description = %Q{Ruby wrapper for Acculynk's Paysecure Web Services API}
+  gem.email = "jford@acculynk.com"
+  gem.authors = ["Acculynk, Inc."]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "acculynk #{version}"
+  rdoc.title = "paysecure #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

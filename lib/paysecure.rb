@@ -1,18 +1,18 @@
-require 'acculynk/client'
-require 'acculynk/configuration'
+require 'paysecure/client'
+require 'paysecure/configuration'
 
-module Acculynk
+module Paysecure
   extend Configuration
 
   class << self
-    # Alias for Acculynk::Client.new
+    # Alias for Paysecure::Client.new
     #
-    # @return [Acculynk::Client]
+    # @return [Paysecure::Client]
     def new(options={})
-      Acculynk::Client.new(options)
+      Paysecure::Client.new(options)
     end
 
-    # Delegate to Acculynk::Client
+    # Delegate to Paysecure::Client
     def method_missing(method, *args, &block)
       return super unless new.respond_to?(method)
       new.send(method, *args, &block)

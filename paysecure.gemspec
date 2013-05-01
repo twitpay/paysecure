@@ -4,17 +4,16 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "acculynk"
-  s.version = "0.0.2"
+  s.name = "paysecure"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["John Ford"]
-  s.date = "2012-03-02"
+  s.authors = ["Acculynk, Inc."]
+  s.date = "2013-05-01"
   s.description = "Ruby wrapper for Acculynk's Web Services API"
-  s.email = "jwford@gmail.com"
+  s.email = "jford@acculynk.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    #"README.md",
     "README.rdoc"
   ]
   s.files = [
@@ -25,22 +24,21 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "acculynk.gemspec",
-    "lib/acculynk.rb",
-    "lib/acculynk/acculynk.rb",
-    "lib/acculynk/api.rb",
-    "lib/acculynk/client.rb",
-    "lib/acculynk/configuration.rb",
-    "lib/acculynk/request.rb",
-    "lib/acculynk/version.rb",
-    "spec/acculynk_spec.rb",
+    "paysecure.gemspec",
+    "lib/paysecure.rb",
+    "lib/paysecure/api.rb",
+    "lib/paysecure/client.rb",
+    "lib/paysecure/configuration.rb",
+    "lib/paysecure/request.rb",
+    "lib/paysecure/version.rb",
+    "spec/paysecure_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/JohnFord/acculynk"
+  s.homepage = "http://github.com/twitpay/acculynk"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "Ruby wrapper for Acculynk's Web Services API"
+  s.summary = "Ruby wrapper for Acculynk's Paysecure Web Services API"
 
   s.add_runtime_dependency(%q<savon>, ["~> 2.1.0"])
   s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
