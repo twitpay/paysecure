@@ -1,5 +1,6 @@
 require 'paysecure/api'
 require 'paysecure/configuration'
+require 'paysecure/logger'
 require 'paysecure/request'
 require 'savon'
 
@@ -22,6 +23,7 @@ module Paysecure
   class Client
     include Request
     include Api
+    include Logger
 
     # @private
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
