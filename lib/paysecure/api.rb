@@ -34,7 +34,7 @@ module Paysecure
       if result['status'] == 'success'
         result.slice('tran_id', 'guid', 'modulus', 'exponent').merge(:success => true)
       else
-        { :success => false }
+        result.slice('errorcode', 'errormsg').merge({ :success => false })
       end
     end
 
